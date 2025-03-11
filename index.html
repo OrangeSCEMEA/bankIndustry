@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAIB Contact Center Demo</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #F5F6F5;
+            color: #333;
+        }
+        /* Header */
+        .header {
+            background-color: #003087;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .header a {
+            color: white;
+            text-decoration: none;
+            margin-left: 15px;
+        }
+        .nav {
+            background-color: #fff;
+            padding: 10px 20px;
+            border-bottom: 1px solid #ddd;
+        }
+        .nav a {
+            color: #003087;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+        .nav a.active {
+            color: #00A651;
+        }
+        /* Hero */
+        .hero {
+            text-align: center;
+            padding: 50px 20px;
+            background: linear-gradient(to bottom, #fff, #F5F6F5);
+        }
+        .hero h1 {
+            color: #003087;
+            font-size: 36px;
+            margin: 0;
+        }
+        .hero p {
+            color: #666;
+            font-size: 18px;
+            margin: 10px 0 20px;
+        }
+        .hero .cta {
+            margin: 10px;
+        }
+        .hero .cta button {
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .btn-green {
+            background-color: #00A651;
+            color: white;
+        }
+        .btn-blue {
+            background-color: #003087;
+            color: white;
+        }
+        .btn-outline {
+            border: 2px solid #00A651;
+            color: #00A651;
+            background: transparent;
+        }
+        /* Main Content */
+        .main {
+            display: flex;
+            justify-content: space-around;
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .main .column {
+            width: 30%;
+            text-align: center;
+            padding: 20px;
+            background: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .main .column h3 {
+            color: #003087;
+            font-size: 20px;
+        }
+        .main .column p {
+            color: #666;
+            font-size: 14px;
+        }
+        .chat-box {
+            background: #F5F6F5;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            text-align: left;
+            font-size: 12px;
+        }
+        .form input, .form textarea, .form select {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        /* Quick Links */
+        .quick-links {
+            text-align: center;
+            padding: 40px 20px;
+            background: #fff;
+        }
+        .quick-links h2 {
+            color: #003087;
+            font-size: 24px;
+        }
+        .links-container {
+            display: flex;
+            justify-content: space-around;
+            max-width: 1200px;
+            margin: 20px auto;
+        }
+        .link-card {
+            width: 22%;
+            padding: 20px;
+            background: #F5F6F5;
+            border-radius: 5px;
+        }
+        /* Footer */
+        .footer {
+            background-color: #003087;
+            color: white;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 14px;
+        }
+        .footer a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        /* Floating Widget */
+        .floating-widget {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #00A651;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 50px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <div class="header">
+        <div class="logo">maib</div>
+        <div>
+            <a href="#">EN</a> | <a href="#">RO</a> | <a href="#">MD</a>
+            <a href="#">Login</a>
+            <a href="#" class="btn-green">Contact Us</a>
+        </div>
+    </div>
+    <div class="nav">
+        <a href="#">Home</a>
+        <a href="#">Loans</a>
+        <a href="#">Deposits</a>
+        <a href="#">Money Transfers</a>
+        <a href="#" class="active">Contact Center</a>
+    </div>
+
+    <!-- Hero -->
+    <div class="hero">
+        <h1>Welcome to MAIB Contact Center</h1>
+        <p>We’re here to help you anytime, anywhere.</p>
+        <div class="cta">
+            <button class="btn-green">Start Live Chat</button>
+            <button class="btn-blue">Call Us Now</button>
+            <button class="btn-outline">Submit a Ticket</button>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main">
+        <div class="column">
+            <h3>Chat with Us</h3>
+            <p>Get instant answers from our support team. Available 24/7.</p>
+            <div class="chat-box">
+                <p><strong>Agent:</strong> Hello! How can I assist you today?</p>
+                <p><strong>You:</strong> I need help with my loan application.</p>
+                <p><strong>Agent:</strong> Let’s get started—please provide your ID number.</p>
+            </div>
+            <button class="btn-green">Start Chat</button>
+        </div>
+        <div class="column">
+            <h3>Call Us</h3>
+            <p>Speak directly with an agent. Fast and reliable support.</p>
+            <p><strong>+373 22 123 456</strong></p>
+            <button class="btn-blue">Call Now</button>
+        </div>
+        <div class="column">
+            <h3>Submit a Request</h3>
+            <p>Send us your query and we’ll get back to you soon.</p>
+            <div class="form">
+                <input type="text" placeholder="Name">
+                <input type="email" placeholder="Email">
+                <select>
+                    <option>Loan Inquiry</option>
+                    <option>Account Issue</option>
+                    <option>Other</option>
+                </select>
+                <textarea placeholder="Message" rows="3"></textarea>
+                <button class="btn-green">Submit</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="quick-links">
+        <h2>Explore More Support Options</h2>
+        <div class="links-container">
+            <div class="link-card">
+                <h4>Loan Calculator</h4>
+                <p>Calculate your loan easily.</p>
+            </div>
+            <div class="link-card">
+                <h4>FAQs</h4>
+                <p>Find answers to common questions.</p>
+            </div>
+            <div class="link-card">
+                <h4>Branch Locator</h4>
+                <p>Locate your nearest branch.</p>
+            </div>
+            <div class="link-card">
+                <h4>Video Consultation</h4>
+                <p>Schedule a call with us.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <div>maib – the leading bank in Moldova</div>
+        <div>
+            <a href="#">Terms & Conditions</a> |
+            <a href="#">Privacy Policy</a> |
+            <a href="#">Cookie Policy</a>
+        </div>
+        <div>© 2025 MAIB. All rights reserved.</div>
+    </div>
+
+    <!-- Floating Widget -->
+    <div class="floating-widget">Need Help?</div>
+</body>
+</html>
